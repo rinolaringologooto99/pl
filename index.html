@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+    <title>FILTROS INDUSTRIALES PLATA | Eficiencia Industrial</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Manrope:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+          // Configuración de tema personalizada
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "primary": "#f1c048",
+                        "on-primary-fixed": "#251a00",
+                        "surface": "#061423",
+                        "background": "#061423",
+                        "on-surface": "#d6e4f9",
+                        "secondary": "#c6c7c3",
+                        "tertiary": "#b2c8e7",
+                        "surface-container": "#132030",
+                        "surface-container-low": "#0f1c2c",
+                        "surface-container-high": "#1e2b3b",
+                        "outline-variant": "#44474c"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                },
+                "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Inter"]
+                }
+              },
+            }
+          }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .beveled-glow { box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset -2px -2px 4px rgba(0, 0, 0, 0.4); }
+        body { min-height: 100dvh; }
+        .bg-mesh { background-image: radial-gradient(at 0% 0%, rgba(241, 192, 72, 0.15) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(18, 32, 48, 1) 0, transparent 50%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
+
+    <nav class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-[#061423]/90 backdrop-blur-md border-b border-white/5">
+        <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+            <span class="font-headline tracking-tighter uppercase text-sm md:text-lg font-bold text-primary">FILTROS INDUSTRIALES PLATA</span>
+        </div>
+        <div class="hidden md:flex gap-8 items-center font-label text-xs tracking-widest uppercase text-secondary">
+            <a class="hover:text-primary transition-colors" href="#inicio">Inicio</a>
+            <a class="hover:text-primary transition-colors" href="#catalogo">Catálogo</a>
+            <a class="hover:text-primary transition-colors" href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 bg-mesh" id="inicio">
+        <div class="relative z-10 text-center max-w-3xl">
+            <div class="mb-8 flex justify-center">
+                <img alt="Logo Filtros Plata" class="h-24 md:h-32 object-contain filter drop-shadow-[0_0_15px_rgba(241,192,72,0.3)]" src="img/logo.png"/>
+            </div>
+            <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter uppercase text-on-surface mb-6 leading-none">
+                Eficiencia Industrial <span class="text-primary block">en Filtración</span>
+            </h1>
+            <p class="text-secondary text-lg md:text-xl font-light mb-10 max-w-xl mx-auto">
+                Soluciones de alto rendimiento diseñadas para las condiciones más exigentes del sector industrial.
+            </p>
+            <a class="inline-flex items-center px-8 py-4 bg-primary text-on-primary-fixed font-label font-bold uppercase tracking-widest rounded-sm beveled-glow transition-transform active:scale-95" href="#catalogo">
+                Explorar Catálogo
+                <span class="material-symbols-outlined ml-2">arrow_forward</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="bg-surface-container-low py-24 px-6">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="group">
+                <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">shield</span>
+                <h3 class="font-headline text-2xl font-bold mb-2">Durabilidad</h3>
+                <p class="text-tertiary text-sm">Materiales forjados para resistir ambientes corrosivos y altas presiones.</p>
+            </div>
+            <div class="group">
+                <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">biotech</span>
+                <h3 class="font-headline text-2xl font-bold mb-2">Precisión</h3>
+                <p class="text-tertiary text-sm">Filtración micrométrica certificada para procesos críticos.</p>
+            </div>
+            <div class="group">
+                <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+                <h3 class="font-headline text-2xl font-bold mb-2">Soporte 24/7</h3>
+                <p class="text-tertiary text-sm">Ingeniería especializada disponible para mantener su línea activa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24" id="catalogo">
+        <div class="px-6 mb-12">
+            <h2 class="font-headline text-4xl font-bold tracking-tight uppercase">Catálogo de Equipos</h2>
+            <div class="h-1 w-20 bg-primary mt-4"></div>
+        </div>
+        
+        <div class="flex overflow-x-auto gap-6 px-6 pb-8 hide-scrollbar snap-x">
+            
+            <div class="flex-none w-72 md:w-80 snap-start">
+                <div class="relative aspect-[3/4] bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer" 
+                     onclick="openProductModal('img/uno.jpg', 'Filtro Prensa Modelo P-7', 'Serie Pesada', 'Ideal para alta presión y condiciones industriales extremas.')">
+                    <img alt="Producto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="img/uno.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <p class="font-label text-[10px] text-primary tracking-widest mb-1 uppercase">Serie Pesada</p>
+                        <h4 class="font-headline text-xl font-bold">Filtro Prensa P-7</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-72 md:w-80 snap-start">
+                <div class="relative aspect-[3/4] bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer" 
+                     onclick="openProductModal('img/dos.jpg', 'Separador S-2', 'Separación', 'Tecnología de flujo laminar para retención de sedimentos.')">
+                    <img alt="Producto 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="img/dos.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <p class="font-label text-[10px] text-primary tracking-widest mb-1 uppercase">Separación</p>
+                        <h4 class="font-headline text-xl font-bold">Separador S-2</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-none w-72 md:w-80 snap-start">
+                <div class="relative aspect-[3/4] bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer" 
+                     onclick="openProductModal('img/tres.jpg', 'Carcasa C-9', 'Accesorios', 'Acero inoxidable 316L con acabado pulido espejo.')">
+                    <img alt="Producto 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="img/tres.jpg"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
+                    <div class="absolute bottom-0 left-0 p-6 w-full">
+                        <p class="font-label text-[10px] text-primary tracking-widest mb-1 uppercase">Accesorios</p>
+                        <h4 class="font-headline text-xl font-bold">Carcasa C-9</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-background py-12 px-6 border-t border-white/5 text-center mb-20">
+        <span class="font-headline tracking-widest text-secondary text-xs font-bold uppercase">FILTROS INDUSTRIALES PLATA © 2024</span>
+    </footer>
+
+    <nav class="fixed md:hidden bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 bg-surface-container/80 backdrop-blur-xl border-t border-white/10">
+        <a class="flex flex-col items-center text-primary" href="#inicio">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] uppercase font-bold mt-1">Inicio</span>
+        </a>
+        <a class="flex flex-col items-center text-secondary" href="#catalogo">
+            <span class="material-symbols-outlined">inventory_2</span>
+            <span class="text-[10px] uppercase font-bold mt-1">Catálogo</span>
+        </a>
+        <a class="flex flex-col items-center text-secondary" href="https://wa.me/524921143257" target="_blank">
+            <span class="material-symbols-outlined">chat</span>
+            <span class="text-[10px] uppercase font-bold mt-1">WhatsApp</span>
+        </a>
+    </nav>
+
+    <div class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4 bg-background/95 backdrop-blur-lg" id="product-modal">
+        <div class="relative w-full max-w-5xl bg-surface-container-high rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl">
+            <button class="absolute top-4 right-4 z-50 w-10 h-10 bg-primary text-on-primary-fixed rounded-full flex items-center justify-center" onclick="closeModal()">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="w-full md:w-1/2 h-64 md:h-auto bg-black">
+                <img class="w-full h-full object-contain" id="modal-image" src=""/>
+            </div>
+            <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
+                <span class="text-primary text-xs font-bold tracking-widest uppercase mb-2" id="modal-category"></span>
+                <h3 class="font-headline text-3xl font-bold mb-4" id="modal-title"></h3>
+                <p class="text-secondary text-lg font-light mb-8" id="modal-description"></p>
+                <a class="w-full py-4 bg-primary text-on-primary-fixed font-bold uppercase text-center rounded-sm" href="https://wa.me/524921143257" target="_blank">
+                    Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openProductModal(image, title, category, description) {
+            const modal = document.getElementById('product-modal');
+            document.getElementById('modal-image').src = image;
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-category').innerText = category;
+            document.getElementById('modal-description').innerText = description;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar modal al hacer clic fuera del contenido
+        document.getElementById('product-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+</body>
+</html>
