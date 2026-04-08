@@ -3,210 +3,323 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
-    <title>FILTROS INDUSTRIALES PLATA | Eficiencia Industrial</title>
+    <title>FILTROS INDUSTRIALES PLATA | Ingeniería Mexicana en Filtración</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Manrope:wght@400;500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
     <script id="tailwind-config">
-          // Configuración de tema personalizada
-          tailwind.config = {
+        tailwind.config = {
             darkMode: "class",
             theme: {
-              extend: {
-                "colors": {
-                        "primary": "#f1c048",
+                extend: {
+                    "colors": {
                         "on-primary-fixed": "#251a00",
-                        "surface": "#061423",
+                        "primary": "#f1c048",
+                        "surface-container-lowest": "#020f1e",
                         "background": "#061423",
                         "on-surface": "#d6e4f9",
-                        "secondary": "#c6c7c3",
-                        "tertiary": "#b2c8e7",
-                        "surface-container": "#132030",
+                        "surface-bright": "#2d3a4a",
                         "surface-container-low": "#0f1c2c",
                         "surface-container-high": "#1e2b3b",
-                        "outline-variant": "#44474c"
-                },
-                "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                },
-                "fontFamily": {
+                        "surface-container-highest": "#283646",
+                        "surface-dim": "#061423",
+                        "outline-variant": "#44474c",
+                        "secondary": "#c6c7c3",
+                        "tertiary": "#b2c8e7"
+                    },
+                    "fontFamily": {
                         "headline": ["Space Grotesk"],
                         "body": ["Manrope"],
                         "label": ["Inter"]
-                }
-              },
+                    }
+                },
             }
-          }
+        }
     </script>
     <style>
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-nav { background: rgba(6, 20, 35, 0.85); backdrop-filter: blur(12px); }
         .beveled-glow { box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset -2px -2px 4px rgba(0, 0, 0, 0.4); }
-        body { min-height: 100dvh; }
-        .bg-mesh { background-image: radial-gradient(at 0% 0%, rgba(241, 192, 72, 0.15) 0, transparent 50%), radial-gradient(at 100% 100%, rgba(18, 32, 48, 1) 0, transparent 50%); }
+        .hero-overlay { background: radial-gradient(circle at center, transparent 0%, #061423 90%); }
+        .sheet-shadow { box-shadow: 0 -20px 60px rgba(0,0,0,0.9); }
+        .zoom-cursor { cursor: zoom-in; }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-fixed overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-[#061423]/90 backdrop-blur-md border-b border-white/5">
-        <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
-            <span class="font-headline tracking-tighter uppercase text-sm md:text-lg font-bold text-primary">FILTROS INDUSTRIALES PLATA</span>
-        </div>
-        <div class="hidden md:flex gap-8 items-center font-label text-xs tracking-widest uppercase text-secondary">
-            <a class="hover:text-primary transition-colors" href="#inicio">Inicio</a>
-            <a class="hover:text-primary transition-colors" href="#catalogo">Catálogo</a>
-            <a class="hover:text-primary transition-colors" href="#contacto">Contacto</a>
-        </div>
-    </nav>
+<nav class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 glass-nav border-b border-outline-variant/10">
+    <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+        <span class="font-headline tracking-tighter uppercase text-sm md:text-base font-bold tracking-[0.2em] text-primary">FILTROS INDUSTRIALES PLATA</span>
+    </div>
+    <div class="hidden md:flex gap-8 items-center font-label text-[10px] tracking-widest uppercase text-secondary">
+        <a class="hover:text-primary transition-colors" href="#inicio">Inicio</a>
+        <a class="hover:text-primary transition-colors" href="#ingenieria">Ingeniería</a>
+        <a class="hover:text-primary transition-colors" href="#catalogo">Catálogo</a>
+        <a class="hover:text-primary transition-colors" href="#contacto">Contacto</a>
+    </div>
+</nav>
 
-    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20 bg-mesh" id="inicio">
-        <div class="relative z-10 text-center max-w-3xl">
-            <div class="mb-8 flex justify-center">
-                <img alt="Logo Filtros Plata" class="h-24 md:h-32 object-contain filter drop-shadow-[0_0_15px_rgba(241,192,72,0.3)]" src="img/logo.png"/>
+<section class="relative min-h-screen flex flex-col justify-center items-center px-6 pt-20" id="inicio">
+    <div class="absolute inset-0 z-0">
+        <img alt="Filtros Industriales" class="w-full h-full object-cover opacity-20 grayscale brightness-75" src="img/hero.jpeg"/>
+        <div class="absolute inset-0 hero-overlay"></div>
+    </div>
+    <div class="relative z-10 text-center max-w-4xl">
+        <div class="mb-6 flex justify-center">
+            <div class="px-3 py-1 border border-primary/30 bg-primary/5 rounded-full">
+                <span class="text-primary font-label text-[10px] uppercase tracking-[0.4em] font-bold">Empresa 100% Mexicana</span>
             </div>
-            <h1 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter uppercase text-on-surface mb-6 leading-none">
-                Eficiencia Industrial <span class="text-primary block">en Filtración</span>
-            </h1>
-            <p class="text-secondary text-lg md:text-xl font-light mb-10 max-w-xl mx-auto">
-                Soluciones de alto rendimiento diseñadas para las condiciones más exigentes del sector industrial.
-            </p>
+        </div>
+        <h1 class="font-headline text-4xl md:text-7xl font-bold tracking-tighter uppercase mb-6 leading-[0.95]">
+            Ingeniería Mexicana en <span class="text-primary">Filtración de Alto Rendimiento</span>
+        </h1>
+        <p class="text-secondary text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+            Especialistas en soluciones personalizadas para maquinaria pesada y procesos industriales.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a class="inline-flex items-center px-8 py-4 bg-primary text-on-primary-fixed font-label font-bold uppercase tracking-widest rounded-sm beveled-glow transition-transform active:scale-95" href="#catalogo">
-                Explorar Catálogo
-                <span class="material-symbols-outlined ml-2">arrow_forward</span>
+                Filtros <span class="material-symbols-outlined ml-2">settings_input_component</span>
             </a>
+            <a class="inline-flex items-center px-8 py-4 border border-outline-variant/30 text-on-surface font-label font-bold uppercase tracking-widest rounded-sm hover:bg-surface-bright" href="#ingenieria">Nosotros</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="bg-surface-container-low py-24 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-            <div class="group">
-                <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">shield</span>
-                <h3 class="font-headline text-2xl font-bold mb-2">Durabilidad</h3>
-                <p class="text-tertiary text-sm">Materiales forjados para resistir ambientes corrosivos y altas presiones.</p>
+<section class="bg-surface-container-low py-24 px-6" id="ingenieria">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 flex items-center justify-center bg-surface-container-highest border border-outline-variant/10 mb-6 group-hover:bg-primary/20 transition-colors duration-500">
+                <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">layers</span>
             </div>
-            <div class="group">
-                <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">biotech</span>
-                <h3 class="font-headline text-2xl font-bold mb-2">Precisión</h3>
-                <p class="text-tertiary text-sm">Filtración micrométrica certificada para procesos críticos.</p>
-            </div>
-            <div class="group">
-                <span class="material-symbols-outlined text-primary text-5xl mb-4 block" style="font-variation-settings: 'FILL' 1;">support_agent</span>
-                <h3 class="font-headline text-2xl font-bold mb-2">Soporte 24/7</h3>
-                <p class="text-tertiary text-sm">Ingeniería especializada disponible para mantener su línea activa.</p>
-            </div>
+            <h3 class="font-headline text-xl font-bold mb-4 uppercase tracking-wider">Materiales de Alta Resistencia</h3>
+            <p class="text-tertiary text-sm leading-relaxed">Componentes diseñados para ciclos de vida prolongados en ambientes corrosivos.</p>
         </div>
-    </section>
+        <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 flex items-center justify-center bg-surface-container-highest border border-outline-variant/10 mb-6 group-hover:bg-primary/20 transition-colors duration-500">
+                <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold mb-4 uppercase tracking-wider">Filtración de altas Micras</h3>
+            <p class="text-tertiary text-sm leading-relaxed">Eficaciaen la retención de partículas microscópicas para sistemas hidráulicos.</p>
+        </div>
+        <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 flex items-center justify-center bg-surface-container-highest border border-outline-variant/10 mb-6 group-hover:bg-primary/20 transition-colors duration-500">
+                <span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">build_circle</span>
+            </div>
+            <h3 class="font-headline text-xl font-bold mb-4 uppercase tracking-wider">Soporte y Mantenimiento</h3>
+            <p class="text-tertiary text-sm leading-relaxed">Servicio técnico directo para la construcción y desarrollo de diseños a medida.</p>
+        </div>
+    </div>
+</section>
 
-    <section class="py-24" id="catalogo">
-        <div class="px-6 mb-12">
-            <h2 class="font-headline text-4xl font-bold tracking-tight uppercase">Catálogo de Equipos</h2>
+<section class="py-24" id="catalogo">
+    <div class="px-6 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+            <h2 class="font-headline text-4xl font-bold tracking-tight uppercase">Catálogo de filtros</h2>
             <div class="h-1 w-20 bg-primary mt-4"></div>
         </div>
-        
-        <div class="flex overflow-x-auto gap-6 px-6 pb-8 hide-scrollbar snap-x">
-            
-            <div class="flex-none w-72 md:w-80 snap-start">
-                <div class="relative aspect-[3/4] bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer" 
-                     onclick="openProductModal('img/uno.jpg', 'Filtro Prensa Modelo P-7', 'Serie Pesada', 'Ideal para alta presión y condiciones industriales extremas.')">
-                    <img alt="Producto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="img/uno.jpg"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <p class="font-label text-[10px] text-primary tracking-widest mb-1 uppercase">Serie Pesada</p>
-                        <h4 class="font-headline text-xl font-bold">Filtro Prensa P-7</h4>
-                    </div>
-                </div>
+        <p class="max-w-md text-tertiary text-sm">Componentes de precisión para aire, Agua y Aceite.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-6">
+        <div class="bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer border border-outline-variant/10" 
+             onclick="openProductModal('img/uno.jpg', 'Filtro de Aire', 'Elliott', 'Unidad de alta presición diseñada para la separación sólido-Aire con placas de polipropileno reforzado. Ideal para minería y procesos químicos.')">
+            <div class="relative aspect-square overflow-hidden">
+                <img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="img/uno.jpg"/>
             </div>
-
-            <div class="flex-none w-72 md:w-80 snap-start">
-                <div class="relative aspect-[3/4] bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer" 
-                     onclick="openProductModal('img/dos.jpg', 'Separador S-2', 'Separación', 'Tecnología de flujo laminar para retención de sedimentos.')">
-                    <img alt="Producto 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="img/dos.jpg"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <p class="font-label text-[10px] text-primary tracking-widest mb-1 uppercase">Separación</p>
-                        <h4 class="font-headline text-xl font-bold">Separador S-2</h4>
-                    </div>
-                </div>
+            <div class="p-6">
+                <p class="text-primary text-[10px] uppercase tracking-widest font-bold mb-1">Filtro de Aire</p>
+                <h4 class="font-headline text-xl font-bold uppercase">Elliott</h4>
             </div>
-
-            <div class="flex-none w-72 md:w-80 snap-start">
-                <div class="relative aspect-[3/4] bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer" 
-                     onclick="openProductModal('img/tres.jpg', 'Carcasa C-9', 'Accesorios', 'Acero inoxidable 316L con acabado pulido espejo.')">
-                    <img alt="Producto 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="img/tres.jpg"/>
-                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
-                    <div class="absolute bottom-0 left-0 p-6 w-full">
-                        <p class="font-label text-[10px] text-primary tracking-widest mb-1 uppercase">Accesorios</p>
-                        <h4 class="font-headline text-xl font-bold">Carcasa C-9</h4>
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </section>
-
-    <footer class="bg-background py-12 px-6 border-t border-white/5 text-center mb-20">
-        <span class="font-headline tracking-widest text-secondary text-xs font-bold uppercase">FILTROS INDUSTRIALES PLATA © 2024</span>
-    </footer>
-
-    <nav class="fixed md:hidden bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 bg-surface-container/80 backdrop-blur-xl border-t border-white/10">
-        <a class="flex flex-col items-center text-primary" href="#inicio">
-            <span class="material-symbols-outlined">home</span>
-            <span class="text-[10px] uppercase font-bold mt-1">Inicio</span>
-        </a>
-        <a class="flex flex-col items-center text-secondary" href="#catalogo">
-            <span class="material-symbols-outlined">inventory_2</span>
-            <span class="text-[10px] uppercase font-bold mt-1">Catálogo</span>
-        </a>
-        <a class="flex flex-col items-center text-secondary" href="https://wa.me/524921143257" target="_blank">
-            <span class="material-symbols-outlined">chat</span>
-            <span class="text-[10px] uppercase font-bold mt-1">WhatsApp</span>
-        </a>
-    </nav>
-
-    <div class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4 bg-background/95 backdrop-blur-lg" id="product-modal">
-        <div class="relative w-full max-w-5xl bg-surface-container-high rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl">
-            <button class="absolute top-4 right-4 z-50 w-10 h-10 bg-primary text-on-primary-fixed rounded-full flex items-center justify-center" onclick="closeModal()">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-            <div class="w-full md:w-1/2 h-64 md:h-auto bg-black">
-                <img class="w-full h-full object-contain" id="modal-image" src=""/>
+        <div class="bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer border border-outline-variant/10" 
+             onclick="openProductModal('img/dos.jpg', 'Colaescente', 'Filtro para aceite', 'Tecnología de flujo para la remoción de partículas densas en sistemas de aceite de motores industriales.')">
+            <div class="relative aspect-square overflow-hidden">
+                <img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="img/dos.jpg"/>
             </div>
-            <div class="w-full md:w-1/2 p-8 flex flex-col justify-center">
-                <span class="text-primary text-xs font-bold tracking-widest uppercase mb-2" id="modal-category"></span>
-                <h3 class="font-headline text-3xl font-bold mb-4" id="modal-title"></h3>
-                <p class="text-secondary text-lg font-light mb-8" id="modal-description"></p>
-                <a class="w-full py-4 bg-primary text-on-primary-fixed font-bold uppercase text-center rounded-sm" href="https://wa.me/524921143257" target="_blank">
-                    Cotizar por WhatsApp
-                </a>
+            <div class="p-6">
+                <p class="text-primary text-[10px] uppercase tracking-widest font-bold mb-1">Separador de Aceite</p>
+                <h4 class="font-headline text-xl font-bold uppercase">Coalescente</h4>
+            </div>
+        </div>
+        <div class="bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer border border-outline-variant/10" 
+             onclick="openProductModal('img/tres.jpg', 'Cartuchos Hilados', 'Alta Pureza', 'Elementos filtrantes fabricados en polipropileno de 5pulgadas y 10 micras de precisión filtrante.')">
+            <div class="relative aspect-square overflow-hidden">
+                <img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="img/tres.jpg"/>
+            </div>
+            <div class="p-6">
+                <p class="text-primary text-[10px] uppercase tracking-widest font-bold mb-1">Filtro de Agua</p>
+                <h4 class="font-headline text-xl font-bold uppercase">Hilado 5"</h4>
+            </div>
+        </div>
+        <div class="bg-surface-container-low rounded-sm overflow-hidden group cursor-pointer border border-outline-variant/10" 
+             onclick="openProductModal('img/cuatro.jpg', 'Panel galvanizado', 'Purificador de aire', 'Sistema de filtración de pariculas para la descontaminación de aire en un marco galvanizado altamente resistente.')">
+            <div class="relative aspect-square overflow-hidden">
+                <img class="w-full h-full object-cover grayscale transition-all duration-500 group-hover:scale-110 group-hover:grayscale-0" src="img/cuatro.jpg"/>
+            </div>
+            <div class="p-6">
+                <p class="text-primary text-[10px] uppercase tracking-widest font-bold mb-1">Filtro de aire</p>
+                <h4 class="font-headline text-xl font-bold uppercase">Panel galvanizado</h4>
             </div>
         </div>
     </div>
+</section>
 
-    <script>
-        function openProductModal(image, title, category, description) {
-            const modal = document.getElementById('product-modal');
-            document.getElementById('modal-image').src = image;
-            document.getElementById('modal-title').innerText = title;
-            document.getElementById('modal-category').innerText = category;
-            document.getElementById('modal-description').innerText = description;
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-        }
+<section class="py-24 px-6 bg-surface-container-high">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-center">
+        <div class="w-full md:w-1/2 space-y-8">
+            <h2 class="font-headline text-4xl font-bold tracking-tight uppercase">Nuestra Operación</h2>
+            <div class="h-1 w-20 bg-primary"></div>
+            <p class="text-secondary text-lg leading-relaxed">Facilitando la logística de distribución nacional desde Zacatecas.</p>
+            <div class="space-y-6 font-label text-[11px] uppercase tracking-[0.2em] text-tertiary">
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary">location_on</span>
+                    <div>
+                        <p class="text-on-surface font-bold mb-1">Planta Zacatecas</p>
+                        <span>Av. Industrial de la Plata 500, CP 98000, México</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-primary">schedule</span>
+                    <span>Lunes - Viernes: 09:00 - 18:00 hrs</span>
+                </div>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 h-80 md:h-[500px] bg-surface-dim rounded-sm overflow-hidden relative border border-outline-variant/20 shadow-2xl">
+            <img class="w-full h-full object-cover grayscale opacity-30 contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsBfaU0qiyazYzo16lmg1fHxZyuV8OKQEqZ4VW_ShoOw_EQ0V_pV79C9kSaUipry8Uktrdjtmkla7UkZmKD5c39kNvjTTb0uZ0tSg-TuMr7GFyF64wxuHCdAfCi6aPWdJU0i9sHXO9lSlaaR6Kb0TZAMOTZvexFhWINMZWy_9-lGSAnLshO4upK_my1_NCx7YZP_mePFwo2SU_aFjaqVPA6w0r4C6z7PnirejdIXpnp8UC2MG2hxd5dbD32oOi3JjLFylCmmswp-5N"/>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-primary/20 rounded-full animate-ping scale-150"></div>
+                    <div class="w-14 h-14 bg-primary text-on-primary-fixed rounded-sm flex items-center justify-center relative z-10 shadow-lg rotate-45">
+                        <span class="material-symbols-outlined -rotate-45">factory</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        function closeModal() {
-            document.getElementById('product-modal').classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
+<footer class="bg-background pt-16 pb-32 px-6 border-t border-outline-variant/10">
+    <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-10">
+        <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-3xl">precision_manufacturing</span>
+            <span class="font-headline tracking-[0.3em] text-lg font-bold uppercase">FILTROS PLATA</span>
+        </div>
+        <p class="font-label tracking-widest text-outline-variant text-[10px] uppercase">FILTROS INDUSTRIALES PLATA 2026</p>
+    </div>
+</footer>
 
-        // Cerrar modal al hacer clic fuera del contenido
-        document.getElementById('product-modal').addEventListener('click', function(e) {
-            if (e.target === this) closeModal();
-        });
-    </script>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-safe bg-[#0D1B2A]/90 backdrop-blur-xl border-t border-outline-variant/20 rounded-t-xl">
+    <a class="flex flex-col items-center text-primary" href="#inicio">
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+        <span class="font-label text-[9px] uppercase tracking-widest font-bold mt-1">Inicio</span>
+    </a>
+    <a class="flex flex-col items-center text-secondary hover:text-primary" href="#catalogo">
+        <span class="material-symbols-outlined">inventory_2</span>
+        <span class="font-label text-[9px] uppercase tracking-widest font-bold mt-1">Catálogo</span>
+    </a>
+    <button class="flex flex-col items-center text-secondary hover:text-primary" onclick="document.getElementById('contact-modal').classList.remove('hidden')">
+        <span class="material-symbols-outlined">contact_phone</span>
+        <span class="font-label text-[9px] uppercase tracking-widest font-bold mt-1">Contacto</span>
+    </button>
+    <a class="flex flex-col items-center text-secondary hover:text-primary" href="https://wa.me/524921075313" target="_blank">
+        <span class="material-symbols-outlined">chat</span>
+        <span class="font-label text-[9px] uppercase tracking-widest font-bold mt-1">WhatsApp</span>
+    </a>
+</nav>
+
+<div class="fixed inset-0 z-[100] hidden items-center justify-center p-6 bg-background/80 backdrop-blur-md" id="contact-modal">
+    <div class="bg-surface-container-highest w-full max-w-sm rounded-sm p-8 shadow-2xl relative border border-primary/20">
+        <button class="absolute top-4 right-4 text-secondary hover:text-primary" onclick="document.getElementById('contact-modal').classList.add('hidden')">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <h3 class="font-headline text-2xl font-bold text-primary uppercase mb-6">Soporte Técnico</h3>
+        <div class="space-y-6">
+            <a class="flex items-center gap-4" href="tel:4921234568">
+                <div class="w-10 h-10 flex items-center justify-center bg-surface-bright border border-outline-variant/20 rounded-sm">
+                    <span class="material-symbols-outlined text-primary">call</span>
+                </div>
+                <div><p class="text-[10px] text-tertiary uppercase">Llamada</p><p class="font-bold text-lg">492 123 4568</p></div>
+            </a>
+        </div>
+        <button class="mt-8 w-full py-4 bg-surface-bright text-[10px] font-bold uppercase tracking-widest" onclick="document.getElementById('contact-modal').classList.add('hidden')">Cerrar</button>
+    </div>
+</div>
+
+<div class="fixed inset-0 z-[110] hidden bg-background" id="product-modal">
+    <button class="fixed top-6 right-6 z-[150] w-12 h-12 flex items-center justify-center bg-primary text-on-primary-fixed rounded-sm shadow-2xl active:scale-95 transition-transform" onclick="closeProductModal()">
+        <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="h-full overflow-y-auto overflow-x-hidden hide-scrollbar">
+        <div class="sticky top-0 w-full h-[70vh] md:h-screen flex items-center justify-center bg-surface-dim z-0 overflow-hidden">
+            <div class="relative group zoom-cursor" onclick="openZoomModal()">
+                <img class="w-full h-full object-contain p-8 md:p-24 scale-110 transition-transform duration-700 hover:scale-115" id="modal-image" src=""/>
+                <div class="absolute bottom-12 right-12 bg-primary/20 backdrop-blur-md p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity border border-primary/40">
+                    <span class="material-symbols-outlined text-primary">zoom_in</span>
+                </div>
+            </div>
+            <div class="absolute top-8 left-8">
+                <span class="px-4 py-1.5 border border-primary/40 bg-background/60 backdrop-blur-md text-primary text-[10px] uppercase font-bold tracking-[0.3em]" id="modal-category"></span>
+            </div>
+        </div>
+        <div class="relative z-10 w-full bg-surface-container-lowest sheet-shadow">
+            <div class="max-w-5xl mx-auto p-10 md:p-20 lg:p-32">
+                <div class="space-y-12">
+                    <div class="space-y-4">
+                        <h3 class="font-headline text-5xl md:text-8xl font-bold uppercase leading-none tracking-tighter" id="modal-title"></h3>
+                        <div class="h-2 w-24 bg-primary"></div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+                        <div class="lg:col-span-2 space-y-6">
+                            <h4 class="font-label text-xs text-primary uppercase tracking-[0.4em] font-bold">Ficha Técnica</h4>
+                            <p class="text-secondary text-lg md:text-xl font-light leading-relaxed" id="modal-description"></p>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <a class="w-full py-6 bg-primary text-on-primary-fixed font-label font-bold uppercase tracking-widest text-center text-xs" href="https://wa.me/524921143257" target="_blank">Cotizar</a>
+                            <button class="w-full py-4 border border-outline-variant/30 text-[10px] font-bold uppercase" onclick="closeProductModal()">Volver</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fixed inset-0 z-[200] hidden bg-black/98 backdrop-blur-2xl flex items-center justify-center p-4 cursor-zoom-out" id="zoom-modal" onclick="closeZoomModal()">
+    <button class="absolute top-8 right-8 text-on-surface/50 hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-4xl">close_fullscreen</span>
+    </button>
+    <img class="max-w-full max-h-full object-contain shadow-2xl" id="zoom-image" src=""/>
+</div>
+
+<script>
+    function openProductModal(image, title, category, description) {
+        const modal = document.getElementById('product-modal');
+        document.getElementById('modal-image').src = image;
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-category').innerText = category;
+        document.getElementById('modal-description').innerText = description;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.overflow-y-auto').scrollTop = 0;
+    }
+
+    function closeProductModal() {
+        document.getElementById('product-modal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+
+    function openZoomModal() {
+        document.getElementById('zoom-image').src = document.getElementById('modal-image').src;
+        document.getElementById('zoom-modal').classList.remove('hidden');
+        document.getElementById('zoom-modal').classList.add('flex');
+    }
+
+    function closeZoomModal() {
+        document.getElementById('zoom-modal').classList.add('hidden');
+    }
+</script>
 </body>
 </html>
